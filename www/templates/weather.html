@@ -1,0 +1,15 @@
+<ion-view id="weatherContainer">
+    <ion-content class="padding">
+        <ion-refresher pulling-text="pull to refresh" on-refresh="refreshWeather()">
+
+        </ion-refresher>
+        <p class="padding" ng-show="isLoading">please wait while fetching data..</p>
+        <div ng-hide="isLoading">
+            <h1>weather for {{timeZone}} is here</h1>
+            <h2>{{current.summary}}</h2>
+            <h3>current temp: {{currentTemp}}&deg</h3>
+            <h3>hight temp <i class="icon ion-arrow-up-c"></i> : {{highTemp}}&deg</h3>
+            <h3>low temp <i class="icon ion-arrow-down-c"></i> : {{lowTemp}}&deg</h3>
+        </div>
+    </ion-content>
+</ion-view>
